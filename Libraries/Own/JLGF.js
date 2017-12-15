@@ -3,7 +3,8 @@ var JLGF = {
     About: {
         Version: 0.1,
         Author: "Poelzl Manuel",
-        Since: 2017
+        Since: 2017,
+        City:"Eibiswald"
     },
 
     //#endregion
