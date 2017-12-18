@@ -55,4 +55,4 @@ function login($username,$password,$firstname,$lastname,$isRestaurant,$isDayCare
 
   </body>
 
-  </html><?php
+  </html>
