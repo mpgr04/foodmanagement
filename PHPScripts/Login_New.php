@@ -30,7 +30,7 @@ function login($username, $password, $mysqli) {
                     $_SESSION["firstname"]=$row["firstname"];
                     $_SESSION["lastname"]=$row["lastname"];
                     
-                    header("Location:../Home.php");
+                    header("Location:../Dashboard.php");
                     exit;
                 }
                 else{
