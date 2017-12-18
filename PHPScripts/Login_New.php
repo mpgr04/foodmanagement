@@ -25,6 +25,11 @@ function login($username, $password, $mysqli) {
                 
                 if($username==$row["username"]&&password_verify($password,PASSWORD_BCRYPT)==$row["password"]){
                     
+                    $_SESSION["loggedin"]=1;
+                    $_SESSION["id"]=$row["id"];
+                    $_SESSION["firstname"]=$row["firstname"];
+                    $_SESSION["lastname"]=$row["lastname"];
+                    
                     header("Location:../Home.php");
                     exit;
                 }
