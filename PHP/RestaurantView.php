@@ -26,7 +26,6 @@
 <body id="ResView_Body">
   <ul id="sideNavigator" class="side-nav">
 
-
   </ul>
   <a href="#" id="ResView_SideNavActivator" data-activates="sideNavigator" class="button-collapse"><i class="material-icons">menu</i></a>
 </body>
