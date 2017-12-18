@@ -20,6 +20,7 @@
   <link rel="stylesheet" href="../CSS/materialize.css">
   <link rel="stylesheet" href="../CSS/General.css">
 
+<!-- Font -->
   <link rel='stylesheet' href='//fonts.googleapis.com/css?family=font1|font2|etc' type='text/css'>
 </head>
 
