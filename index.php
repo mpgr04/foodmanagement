@@ -11,10 +11,7 @@ if ($_SESSION) {
 } else {
 }
 #endregion
-#Register-Funktion
-function login($username,$password,$firstname,$lastname,$isRestaurant,$isDayCare,$isParent,$DatabaseHelper) {
-    
-}
+
 ?>
 
   <html>
@@ -46,7 +43,7 @@ function login($username,$password,$firstname,$lastname,$isRestaurant,$isDayCare
       <br />
       <input class="centerText" name="textfield_password" type="password" style="width:230px;" placeholder="Passwort..." />
       <br />
-      <submit class="btn-flat waves-effect accentForecolor">Login</submit>
+      <input type="submit" class="btn-flat waves-effect accentForecolor" value="Login" />
     </form>
   </body>
 
