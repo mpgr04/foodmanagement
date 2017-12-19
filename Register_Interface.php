@@ -12,7 +12,7 @@ if ($_SESSION) {
 }
 #endregion
 #Register-Funktion
-function login($username,$password,$firstname,$lastname,$isRestaurant,$isDayCare,$isParent$DatabaseHelper) {
+function login($username,$password,$firstname,$lastname,$isRestaurant,$isDayCare,$isParent,$DatabaseHelper) {
   
 }
 ?>
