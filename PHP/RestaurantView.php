@@ -46,7 +46,7 @@ else{
   <body id="ResView_Body">
     <ul id="sideNavigator" class="side-nav">
       <li><a class="waves-effect"><i class="material-icons left">view_list</i>Overview</a></li>
-      <li><a class="waves-effect"><i class="material-icons left">format_list</i>Statistics</a></li>
+      <li><a class="waves-effect"><i class="material-icons left">format_list</i>Stats</a></li>
     </ul>
     <a href="#" id="ResView_SideNavActivator" data-activates="sideNavigator" class="button-collapse"><i class="material-icons">menu</i></a>
     <table id="ResView_OberviewTable">
