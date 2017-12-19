@@ -3,7 +3,7 @@
 function login($username, $password, $mysqli) {
     
     $username = $_POST["textfield_username"];
-    $password= $_POST["textfield_passwort"];
+    $password= $_POST["textfield_password"];
     
     if($username==""||$password==""){
         

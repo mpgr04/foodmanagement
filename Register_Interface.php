@@ -38,8 +38,8 @@ function login($username,$password,$firstname,$lastname,$isRestaurant,$isDayCare
   </head>
 
   <body>
-    <form method="POST" action="../PHPScripts/Register.php"  class=" centerHoriVerti z-depth-1 hoverable centerText" style="background-color:white;width:300px;height:250px;">
-      <h5 class="accentForecolor centerText">Login</h5>
+    <form method="POST" action="../PHPScripts/Register.php"  class=" centerHoriVerti z-depth-1 hoverable centerText" style="background-color:white;width:300px;height:400px;">
+      <h5 class="accentForecolor centerText">Useranlage</h5>
       <div class="divider"></div>
       <br />
       <input class="centerText" name="textfield_firstname" type="text" style="width:230px;" placeholder="Vorname..." autofocus />

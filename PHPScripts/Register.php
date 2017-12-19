@@ -12,4 +12,7 @@ function login($username, $password, $mysqli) {
         $DatabaseHelper=new DatabaseHelper();
 
         $connection=$DatabaseHelper->Connect("localhost","root","poelzlpichler_gr04!","meal_management");
-        $createUserDataQuery="INSERT INTO tb_users SET "
+        $getLatesIDDataQuery="SELECT max(id) FROM tb_users";
+        $result=$DatabaseHelper->Query($connection,$getLatestIDDataQuery);
+        echo $result;
+        $createUserDataQuery="INSERT INTO tb_users (id, firstname, lastname, username, password) VALUES ('$id', '$firstname', '$lastname', '$username', '$password')";
