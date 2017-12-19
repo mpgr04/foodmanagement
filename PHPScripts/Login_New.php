@@ -15,9 +15,9 @@ else{
     $connection=$DatabaseHelper->Connect("localhost","root","poelzlpichler_gr04!","meal_management");
     $getUserDataQuery="SELECT * FROM tb_users";
     
-    $result=mysqli_query($connection,$getUserDataQuery);
+    $result=$DatabaseHelper->Query($connection,$getUserDataQuery);
     
-    if(mysqli_num_rows($result)>0){
+    if($DatabaseHelper->GetRowNr($result)>0){
         
         while($row=mysqli_fetch_assoc($result)){
             
