@@ -38,7 +38,7 @@ function login($username,$password,$firstname,$lastname,$isRestaurant,$isDayCare
   </head>
 
   <body>
-    <form method="POST" action="../PHPScripts/Login.php"  class=" centerHoriVerti z-depth-1 hoverable centerText" style="background-color:white;width:300px;height:250px;">
+    <form method="POST" action="../PHPScripts/Register.php"  class=" centerHoriVerti z-depth-1 hoverable centerText" style="background-color:white;width:300px;height:250px;">
       <h5 class="accentForecolor centerText">Login</h5>
       <div class="divider"></div>
       <br />
