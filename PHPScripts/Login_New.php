@@ -22,7 +22,7 @@ else{
         while($row=mysqli_fetch_assoc($result)){
             
             if($username==$row["username"]&&$password==$row["password"]){
-                
+                session_start();
                 $_SESSION["loggedin"]=1;
                 $_SESSION["id"]=$row["id"];
                 $_SESSION["firstname"]=$row["firstname"];
@@ -33,7 +33,7 @@ else{
             }
             else{
                 header("Location../index.php");
-                exit;
+                continue;
             }
         }
     }
