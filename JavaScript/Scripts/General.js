@@ -15,7 +15,10 @@
 $(document).ready(function () {
 
     //#region Init
+    $("#ResView_OberviewTable").DataTable({
+        responsive: true
 
+    });
     //#endregion
 
     $("#ResView_Body").on("mousemove", function (event) {
