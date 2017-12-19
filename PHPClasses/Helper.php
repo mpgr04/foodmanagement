@@ -11,7 +11,7 @@ class DatabaseHelper
         }
         
         if($connection){
-            return $connection
+            return $connection;
         }
     }
     public function Disconnect($dbc){
@@ -27,7 +27,8 @@ class DatabaseHelper
         return $value;
     }
     public function Query($connection,$query){
-        mysqli_query($connection,$query);
+        $result=mysqli_query($connection,$query);
+        return $result;
     }
 }
 ?>
