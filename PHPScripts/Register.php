@@ -16,3 +16,5 @@ function login($username, $password, $mysqli) {
         $result=$DatabaseHelper->Query($connection,$getLatestIDDataQuery);
         echo $result;
         $createUserDataQuery="INSERT INTO tb_users (id, firstname, lastname, username, password) VALUES ('$id', '$firstname', '$lastname', '$username', '$password')";
+    }
+}
