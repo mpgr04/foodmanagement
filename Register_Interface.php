@@ -13,7 +13,7 @@ if ($_SESSION) {
 #endregion
 #Register-Funktion
 function login($username,$password,$firstname,$lastname,$isRestaurant,$isDayCare,$isParent$DatabaseHelper) {
-    
+  
 }
 ?>
 
@@ -38,16 +38,21 @@ function login($username,$password,$firstname,$lastname,$isRestaurant,$isDayCare
   </head>
 
   <body>
-    <form method="POST" action="../PHPScripts/Login_New.php" class=" centerHoriVerti z-depth-1 hoverable centerText" style="background-color:white;width:300px;height:250px;">
+    <form method="POST" action="../PHPScripts/Register.php"  class=" centerHoriVerti z-depth-1 hoverable centerText" style="background-color:white;width:300px;height:250px;">
       <h5 class="accentForecolor centerText">Login</h5>
       <div class="divider"></div>
       <br />
+      <input class="centerText" name="textfield_firstname" type="text" style="width:230px;" placeholder="Vorname..." autofocus />
+      <br />
+      <input class="centerText" name="textfield_lastname" type="text" style="width:230px;" placeholder="Nachname..." />
+      <br />
       <input class="centerText" name="textfield_username" type="text" style="width:230px;" placeholder="Username..." />
       <br />
-      <input class="centerText" name="textfield_password" type="password" style="width:230px;" placeholder="Passwort..." />
+      <input class="centerText" name="textfield_password" type="password" style="width:230px;" placeholder="Passwort..."/>
       <br />
       <submit class="btn-flat waves-effect accentForecolor">User anlegen</submit>
     </form>
+
   </body>
 
-  </html>
+  </html><?php
