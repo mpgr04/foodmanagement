@@ -11,10 +11,7 @@ if ($_SESSION) {
 } else {
 }
 #endregion
-#Register-Funktion
-function login($username,$password,$firstname,$lastname,$isRestaurant,$isDayCare,$isParent,$DatabaseHelper) {
-  
-}
+
 ?>
 
   <html>

@@ -15,13 +15,13 @@ else{
     $connection=$DatabaseHelper->Connect("localhost","root","poelzlpichler_gr04!","meal_management");
     $getUserDataQuery="SELECT * FROM tb_users";
     
-    $result=$DatabaseHelper->Query($connection,$getUserDataQuery);
+    $result=mysqli_query($connection,$getUserDataQuery);
     
-    if($DatabaseHelper->GetRowNr($result)>0){
+    if(mysqli_num_rows($result)>0){
         
         while($row=mysqli_fetch_assoc($result)){
             
-            if($username==$row["username"]&&password_verify($password,PASSWORD_BCRYPT)==$row["password"]){
+            if($username==$row["username"]&&$password==$row["password"]){
                 
                 $_SESSION["loggedin"]=1;
                 $_SESSION["id"]=$row["id"];
@@ -33,7 +33,7 @@ else{
             }
             else{
                 header("Location../index.php");
-                continue;
+                exit;
             }
         }
     }
