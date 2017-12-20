@@ -29,7 +29,13 @@ class DatabaseHelper
     }
     public function Query($connection,$query){
         $result=mysqli_query($connection,$query);
-        return $result;
+        if($result===TRUE){
+            
+            return $result;
+        }
+        else{
+            echo "Your Query is not working as expected!";
+        }
     }
 }
 ?>
