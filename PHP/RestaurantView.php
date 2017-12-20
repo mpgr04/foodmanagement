@@ -59,7 +59,7 @@ else{
 require_once("../PHPClasses/Helper.php");
 $DatabaseHelper=new DatabaseHelper();
 $qry_getDataForResOverview="SELECT * FROM tb_restaurant_history";
-$connection=$DatabaseHelper->Connect("localhost","root","","meal_management");
+$connection=$DatabaseHelper->Connect("localhost","root","poelzlpichler_gr04!","meal_management");
 $result=$DatabaseHelper->Query($connection,$qry_getDataForResOverview);
 
 
@@ -77,6 +77,14 @@ $DatabaseHelper->Disconnect($connection);
 ?>
       </tbody>
     </table>
+    <div class="fixed-action-btn vertical">
+      <a class="btn-floating btn-large red">
+        <i class="large material-icons">mode_edit</i>
+      </a>
+      <ul>
+        <!-- Components -->
+      </ul>
+    </div>
   </body>
 
   </html>

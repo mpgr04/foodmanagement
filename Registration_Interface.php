@@ -5,7 +5,7 @@ session_start();
 
 if ($_SESSION) {
     if ($_SESSION["loggedin"]==1) {
-        header("Location:PHP/Test.php");
+        header("Location:PHP/RestaurantView.php");
         exit;
     }
 } else {

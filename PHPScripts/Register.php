@@ -23,7 +23,7 @@
     else{
         require_once("../PHPClasses/Helper.php");
         $DatabaseHelper=new DatabaseHelper();
-
+        
         $connection=$DatabaseHelper->Connect("localhost","root","poelzlpichler_gr04!","meal_management");
         $getLatesIDDataQuery="SELECT max(id) FROM tb_users";
         $LatestID=$DatabaseHelper->Query($connection,$getLatestIDDataQuery);
