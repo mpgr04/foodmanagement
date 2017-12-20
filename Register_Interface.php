@@ -35,7 +35,7 @@ if ($_SESSION) {
   </head>
 
   <body>
-    <form method="POST" action="../PHPScripts/Register.php"  class=" centerHoriVerti z-depth-1 hoverable centerText" style="background-color:white;width:300px;height:400px;">
+    <form method="POST" action="PHPScripts/Register.php"  class=" centerHoriVerti z-depth-1 hoverable centerText" style="background-color:white;width:400px;height:400px;">
       <h5 class="accentForecolor centerText">Useranlage</h5>
       <div class="divider"></div>
       <br />
@@ -47,7 +47,13 @@ if ($_SESSION) {
       <br />
       <input class="centerText" name="textfield_password" type="password" style="width:230px;" placeholder="Passwort..."/>
       <br />
-      <submit class="btn-flat waves-effect accentForecolor">User anlegen</submit>
+      <input class="with-gap" name="isX" type="radio" id="isRestaurant" value="isRestaurant"/>
+      <label for="isRestaurant">Restaurant</label>
+      <input class="with-gap" name="isX" type="radio" id="isDayCare" value="isDayCare"/>
+      <label for="isDayCare">Nachmittagsbetreuung</label>
+      <input class="with-gap" name="isX" type="radio" id="isParent" value="isParent"/>
+      <label for="isParent">Eltern</label>
+      <input type="submit" class="btn-flat waves-effect accentForecolor" value="User anlegen" />
     </form>
 
   </body>
