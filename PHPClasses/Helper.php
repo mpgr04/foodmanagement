@@ -2,6 +2,7 @@
 
 class DatabaseHelper
 {
+    /*fixed minor issues*/
     public function Connect($server, $user, $password, $db="")
     {
         if ($db=="") {
