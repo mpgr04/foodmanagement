@@ -21,7 +21,7 @@ else{
         
         while($row=mysqli_fetch_assoc($result)){
             
-            if($username==$row["username"]&&$password==$row["password"]){
+            if($username==$row["username"]&&password_verify($password,"sha256")==$row["password"]){
                 session_start();
                 $_SESSION["loggedin"]=1;
                 $_SESSION["id"]=$row["id"];
