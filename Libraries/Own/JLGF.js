@@ -50,7 +50,6 @@
             return currentDateAndTime;
         };
 
-
         return JLGF;
     }
 
