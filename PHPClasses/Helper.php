@@ -2,7 +2,6 @@
 
 class DatabaseHelper
 {
-    /*fixed minor issues*/
     public function Connect($server, $user, $password, $db="")
     {
         if ($db=="") {
@@ -16,16 +15,26 @@ class DatabaseHelper
         }
     }
     public function Disconnect($dbc){
-        mysqli_close($dbc);
+        if($dbc!=""){
+            mysqli_close($dbc);
+        }
+        
     }
     public function CheckConnection($dbc){
-        $result=mysqli_ping($dbc);
         
-        return $result;
+        if($dbc!=""){
+            $result=mysqli_ping($dbc);
+            return $result;
+        }
+        
     }
     public function GetRowNr($resultObject){
-        $value=mysqli_num_rows($resultObject);
-        return $value;
+        
+        if($resultObject!=""){
+            $value=mysqli_num_rows($resultObject);
+            return $value;
+        }
+        
     }
     public function Query($connection,$query){
         $result=mysqli_query($connection,$query);

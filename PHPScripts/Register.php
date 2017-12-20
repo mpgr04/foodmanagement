@@ -26,10 +26,16 @@ else{
     
     $connection=$DatabaseHelper->Connect("localhost","root","poelzlpichler_gr04!","meal_management");
     $getLatesIDDataQuery="SELECT max(id) FROM tb_users";
-    $LatestID=$DatabaseHelper->Query($connection,$getLatestIDDataQuery);
-    $nextID = $LatestID + 1;
+    $IDQueryResult=$DatabaseHelper->Query($connection,$getLatestIDDataQuery);
+    $resultObject=mysqli_fetch_object($IDQueryResult);
+    $resultObject=get_object_vars($resultObject);
+    $resultObject=array_values($resultObject)[0];
     
-    $createUserDataQuery="INSERT INTO tb_users (id, firstname, lastname, username, password, isRestaurant, isDayCare, isParent) VALUES ('$id', '$firstname', '$lastname', '$username', '$hashed', '$isRestaurant', '$isDayCare', '$isParent')";
+    $nextID=$resultObject;
+    
+    
+    
+    $createUserDataQuery="INSERT INTO tb_users (id, firstname, lastname, username, password, isRestaurant, isDayCare, isParent) VALUES ('$nextID', '$firstname', '$lastname', '$username', '$hashed', '$isRestaurant', '$isDayCare', '$isParent')";
     // $createUserDataQuery="INSERT INTO tb_users VALUES ('$id', '$firstname', '$lastname', '$username', '$hashed', '$isRestaurant', '$isDayCare', '$isParent')"; ALTERNATIVE QUERY
     $createUser=$DatabaseHelper->Query($connection,$createUserDataQuery);
 }
