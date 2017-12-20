@@ -59,7 +59,7 @@ else{
 require_once("../PHPClasses/Helper.php");
 $DatabaseHelper=new DatabaseHelper();
 $qry_getDataForResOverview="SELECT * FROM tb_restaurant_history";
-$connection=$DatabaseHelper->Connect("localhost","root","","meal_management");
+$connection=$DatabaseHelper->Connect("localhost","root","poelzlpichler_gr04!","meal_management");
 $result=$DatabaseHelper->Query($connection,$qry_getDataForResOverview);
 
 
