@@ -13,10 +13,10 @@
     if ($isX == 'isRestaurant') {
         $isRestaurant == 1;
     }
-    if $isX == 'isDayCare' {
+    if ($isX == 'isDayCare') {
         $isDayCare = 1;
     }
-    if $isX == 'isParent' {
+    if ($isX == 'isParent') {
         $isParent == 1;
     }
 
