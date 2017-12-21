@@ -16,12 +16,12 @@ else{
     $getUserDataQuery="SELECT * FROM tb_users";
     
     $result=$DatabaseHelper->Query($connection,$getUserDataQuery);
-    
+    $password=trim($password);
     if($DatabaseHelper->GetRowNr($result)>0){
         
         while($row=mysqli_fetch_assoc($result)){
             
-            if($username==$row["username"]&&password_verify($password,"sha256")==$row["password"]){
+            if($username==$row["username"]&&hash('SHA256', $password)==$row["password"]){
                 session_start();
                 $_SESSION["loggedin"]=1;
                 $_SESSION["id"]=$row["id"];
