@@ -11,13 +11,13 @@ $isDayCare = 0;
 
 //Prüft welcher der Radiobuttons ausgewählt wurde
 if ($isX == 'isRestaurant') {
-    $isRestaurant == 1;
+    $isRestaurant = 1;
 }
 if ($isX == 'isDayCare') {
     $isDayCare = 1;
 }
 if ($isX == 'isParent') {
-    $isParent == 1;
+    $isParent = 1;
 }
 
 else{
@@ -33,6 +33,6 @@ else{
     $nextID=$resultObject;
     
     $createUserDataQuery="INSERT INTO tb_users (id, firstname, lastname, username, password, isRestaurant, isDayCare, isParent) VALUES ('$nextID', '$firstname', '$lastname', '$username', '$hashed', '$isRestaurant', '$isDayCare', '$isParent')";
-    // $createUserDataQuery="INSERT INTO tb_users VALUES ('$id', '$firstname', '$lastname', '$username', '$hashed', '$isRestaurant', '$isDayCare', '$isParent')"; ALTERNATIVE QUERY
+    // ALTERNATIVE QUERY $createUserDataQuery="INSERT INTO tb_users VALUES ('$id', '$firstname', '$lastname', '$username', '$hashed', '$isRestaurant', '$isDayCare', '$isParent')";
     $createUser=$DatabaseHelper->Query($connection,$createUserDataQuery);
 }
