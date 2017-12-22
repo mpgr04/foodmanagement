@@ -66,7 +66,6 @@ if($DatabaseHelper->GetRowNr($result)>0){
     while($row=mysqli_fetch_assoc($result)){
         
         echo "<tr><td>".$row["date"]."</td><td>".$row["amount"]."</td><td>".$row["description"]."</td></tr>";
-        
     }
     
 }
