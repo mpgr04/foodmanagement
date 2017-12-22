@@ -15,8 +15,11 @@
 $(document).ready(function () {
 
     //#region Init
-    $("#ResView_OberviewTable").DataTable({
-        responsive: true
+    //#region Init
+    $("#ResView_OverviewTable").DataTable({
+        "lengthChange": false,
+        "responsive": true,
+        "paging": false
 
     });
     //#endregion
