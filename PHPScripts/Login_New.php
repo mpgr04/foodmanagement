@@ -12,7 +12,7 @@ else{
     require_once("../PHPClasses/Helper.php");
     $DatabaseHelper=new DatabaseHelper();
     
-    $connection=$DatabaseHelper->Connect("localhost","root","poelzlpichler_gr04!","meal_management");
+    $connection=$DatabaseHelper->Connect("localhost","root","","meal_management");
     $getUserDataQuery="SELECT * FROM tb_users";
     
     $result=$DatabaseHelper->Query($connection,$getUserDataQuery);
