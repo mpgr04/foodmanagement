@@ -75,11 +75,12 @@ $DatabaseHelper->Disconnect($connection);
 ?>
       </tbody>
     </table>
-    <div class="fixed-action-btn vertical">
+    <div class="fixed-action-btn horizontal">
       <a class="btn-floating btn-large red">
         <i class="large material-icons">mode_edit</i>
       </a>
       <ul>
+        <li><a href="http://foodmanagement.naxant.at/experimental/PHP/RestaurantView.php" class="btn-floating blue"><i class="material-icons">refresh</i></a></li>
         <li><a href="../PHPScripts/Logout.php" class="btn-floating red" title="Logout"><i class="material-icons">exit_to_app</i></a></li>
       </ul>
     </div>
