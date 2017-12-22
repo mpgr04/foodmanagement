@@ -15,7 +15,6 @@
 $(document).ready(function () {
 
     //#region Init
-    //#region Init
     $("#ResView_OverviewTable").DataTable({
         "lengthChange": false,
         "responsive": true,
@@ -24,14 +23,6 @@ $(document).ready(function () {
     });
     //#endregion
 
-    $("#ResView_Body").on("mousemove", function (event) {
-        if (event.pageX < 50) {
-            $("#ResView_SideNavActivator").sideNav("show");
-        }
-        else {
-            $("#ResView_SideNavActivator").sideNav("hide");
-        }
-    });
 });
 
 //#endregion
