@@ -29,7 +29,7 @@ switch($isX){
 
 if($username==""&&$password==""&&$firstname==""&&$lastname==""&&$isX==""){
     
-    header("Location:../index.php");
+    header("Location:http://foodmanagement.naxant.at/experimental/index.php");
     exit;
 }
 else{

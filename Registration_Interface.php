@@ -5,7 +5,7 @@ session_start();
 
 if ($_SESSION) {
     if ($_SESSION["loggedin"]==1) {
-        header("Location:PHP/RestaurantView.php");
+        header("Location:http://foodmanagement.naxant.at/experimental/index.php");
         exit;
     }
 } else {

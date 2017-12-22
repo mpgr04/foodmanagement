@@ -5,14 +5,14 @@ $password= $_POST["textfield_password"];
 
 if($username==""||$password==""){
     
-    header("Location:../index.php");
+    header("Location:http://foodmanagement.naxant.at/experimental/index.php");
     exit;
 }
 else{
     require_once("../PHPClasses/Helper.php");
     $DatabaseHelper=new DatabaseHelper();
     
-    $connection=$DatabaseHelper->Connect("localhost","root","","meal_management");
+    $connection=$DatabaseHelper->Connect("localhost","root","poelzlpichler_gr04!","meal_management");
     $getUserDataQuery="SELECT * FROM tb_users";
     
     $result=$DatabaseHelper->Query($connection,$getUserDataQuery);
@@ -28,11 +28,11 @@ else{
                 $_SESSION["firstname"]=$row["firstname"];
                 $_SESSION["lastname"]=$row["lastname"];
                 
-                header("Location:../PHP/RestaurantView.php");
+                header("Location:http://foodmanagement.naxant.at/experimental/PHP/RestaurantView.php");
                 exit;
             }
             else{
-                header("Location:../index.php");
+                header("Location:http://foodmanagement.naxant.at/experimental/index.php");
                 exit;
             }
         }
