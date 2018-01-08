@@ -20,6 +20,11 @@ $(document).ready(function () {
         "responsive": true,
         "paging": false
     });
+    $("#table_DCH").DataTable({
+        "lengthChange": false,
+        "responsive": true,
+        "paging": false
+    });
     //#endregion
 
 });

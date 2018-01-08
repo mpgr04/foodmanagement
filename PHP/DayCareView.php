@@ -42,7 +42,7 @@ else{
   </head>
 
   <body>
-    <table>
+    <table id="table_DCH">
       <thead>
         <th>Name</th>
         <th>Date</th>
