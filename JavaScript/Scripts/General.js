@@ -19,7 +19,6 @@ $(document).ready(function () {
         "lengthChange": false,
         "responsive": true,
         "paging": false
-
     });
     //#endregion
 
