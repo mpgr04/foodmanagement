@@ -28,7 +28,8 @@ else{
     <title>Overview</title>
     <!-- Libraries -->
     <script src="../Libraries/jQuery/jQuery.js"></script>
-    <script src="../Libraries/jQueryDataTables/datatables.js"></script>
+    <!-- Not sure of below script type is needed -->
+    <script src="../Libraries/jQueryDataTables/datatables.js" type="text/javascript"></script>
     <script src="../Libraries/jQueryUI/jquery-ui.js"></script>
     <script src="../Libraries/Materialize/materialize.js"></script>
     <script src="../Libraries/Own/JLGF.js"></script>
