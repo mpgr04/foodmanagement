@@ -6,14 +6,16 @@ session_start();
 if($_SESSION){
     
     if($_SESSION["loggedin"]==0){
-        header("Location:http://foodmanagement.naxant.at/experimental/index.php");
+        header("Location:../index.php");
         exit;
     }
     
 }
 
 else{
-    header("Location:http://foodmanagement.naxant.at/experimental/index.php");
+    // header("Location:http://foodmanagement.naxant.at/experimental/index.php");
+    // exit;
+    header("Location:../index.php");
     exit;
 }
 #endregion
@@ -46,7 +48,7 @@ else{
   </head>
 
   <body>
-    <table id="ResView_OverviewTable">
+    <table id="ResView_OverviewTable" class="striped compact">
       <thead>
         <th>Date</th>
         <th>Count</th>

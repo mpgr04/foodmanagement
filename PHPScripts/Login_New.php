@@ -5,7 +5,9 @@ $password= $_POST["textfield_password"];
 
 if($username==""||$password==""){
     
-    header("Location:http://foodmanagement.naxant.at/experimental/index.php");
+    // header("Location:http://foodmanagement.naxant.at/experimental/index.php");
+    // exit;
+    header("Location:../index.php");
     exit;
 }
 else{
@@ -28,11 +30,13 @@ else{
                 $_SESSION["firstname"]=$row["firstname"];
                 $_SESSION["lastname"]=$row["lastname"];
                 
-                header("Location:http://foodmanagement.naxant.at/experimental/PHP/RestaurantView.php");
+                // header("Location:http://foodmanagement.naxant.at/experimental/PHP/RestaurantView.php");
+                header("Location:RestaurantView.php");
                 exit;
             }
             else{
-                header("Location:http://foodmanagement.naxant.at/experimental/index.php");
+                // header("Location:http://foodmanagement.naxant.at/experimental/index.php");
+                header("Location:../index.php");
                 exit;
             }
         }
