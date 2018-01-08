@@ -29,9 +29,10 @@ if ($_SESSION) {
     <!-- Scripts -->
     <script src="JavaScript/General.js"></script>
     <!-- CSS -->
-    <link rel="stylesheet" href="CSS/materialize.css" type="text/css" />
-    <link rel="stylesheet" href="CSS/General.css" type="text/css" />
-    <link rel='stylesheet' href='//fonts.googleapis.com/css?family=font1|font2|etc' type='text/css'>
+    <link rel="stylesheet" href="CSS/materialize.css" type="text/css">
+    <linkr rel="stylesheet" href="CSS/materializeCustom.css" type="text/css">
+      <link rel="stylesheet" href="CSS/General.css" type="text/css">
+      <link rel='stylesheet' href='//fonts.googleapis.com/css?family=font1|font2|etc' type='text/css'>
   </head>
 
   <body>
