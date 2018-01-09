@@ -7,7 +7,7 @@ if($username==""||$password==""){
     
     // header("Location:http://foodmanagement.naxant.at/experimental/index.php");
     // exit;
-    header("Location:../index.php");
+    header("Location:http://foodmanagement.naxant.at/experimental/index.php");
     exit;
 }
 else{
@@ -29,14 +29,16 @@ else{
                 $_SESSION["id"]=$row["id"];
                 $_SESSION["firstname"]=$row["firstname"];
                 $_SESSION["lastname"]=$row["lastname"];
-                
+                $_SESSION["isParent"]= $row["isParent"];
+                $_SESSION["isDayCare"]=$row["isDayCare"];
+                $_SESSION["isRestaurant"]=$row["isRestaurant"];
                 // header("Location:http://foodmanagement.naxant.at/experimental/PHP/RestaurantView.php");
-                header("Location:RestaurantView.php");
+                header("Location:http://foodmanagement.naxant.at/experimental/PHP/RestaurantView.php")
                 exit;
             }
             else{
                 // header("Location:http://foodmanagement.naxant.at/experimental/index.php");
-                header("Location:../index.php");
+                header("Location:http://foodmanagement.naxant.at/experimental/index.php");
                 exit;
             }
         }

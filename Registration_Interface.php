@@ -4,9 +4,9 @@
 session_start();
 
 if ($_SESSION) {
-    if ($_SESSION["loggedin"]==1) {
+    if ($_SESSION["loggedin"]==0&&$_SESSION["isDayCare"]!=1) {
         // header("Location:http://foodmanagement.naxant.at/experimental/index.php");
-        header("Location:../index.php");
+        header("Location:http://foodmanagement.naxant.at/experimental/index.php");
         exit;
     }
 } else {

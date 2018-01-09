@@ -6,7 +6,7 @@ session_start();
 if($_SESSION){
     
     if($_SESSION["loggedin"]==0){
-        header("Location:../index.php");
+        header("Location:http://foodmanagement.naxant.at/experimental/index.php");
         exit;
     }
     
@@ -15,7 +15,7 @@ if($_SESSION){
 else{
     // header("Location:http://foodmanagement.naxant.at/experimental/index.php");
     // exit;
-    header("Location:../index.php");
+    header("Location:http://foodmanagement.naxant.at/experimental/index.php");
     exit;
 }
 #endregion
@@ -29,19 +29,19 @@ else{
     <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon">
     <title>Overview</title>
     <!-- Libraries -->
-    <script src="../Libraries/jQuery/jQuery.js"></script>
+    <script src="http://foodmanagement.naxant.at/experimental/Libraries/jQuery/jQuery.js"></script>
     <!-- Not sure of below script type is needed -->
-    <script src="../Libraries/jQueryDataTables/datatables.js" type="text/javascript"></script>
-    <script src="../Libraries/jQueryUI/jquery-ui.js"></script>
-    <script src="../Libraries/Materialize/materialize.js"></script>
-    <script src="../Libraries/Own/JLGF.js"></script>
+    <script src="http://foodmanagement.naxant.at/experimental/Libraries/jQueryDataTables/datatables.js" type="text/javascript"></script>
+    <script src="http://foodmanagement.naxant.at/experimental/Libraries/jQueryUI/jquery-ui.js"></script>
+    <script src="http://foodmanagement.naxant.at/experimental/Libraries/Materialize/materialize.js"></script>
+    <script src="http://foodmanagement.naxant.at/experimental/Libraries/Own/JLGF.js"></script>
     <!-- Scripts -->
-    <script src="../JavaScript/Scripts/General.js"></script>
+    <script src="http://foodmanagement.naxant.at/experimental/JavaScript/Scripts/General.js"></script>
     <!-- CSS -->
-    <link rel="stylesheet" href="../CSS/jquery-ui.css">
-    <link rel="stylesheet" href="../CSS/datatables.css">
-    <link rel="stylesheet" href="../CSS/materialize.css">
-    <link rel="stylesheet" href="../CSS/General.css">
+    <link rel="stylesheet" href="http://foodmanagement.naxant.at/experimental/CSS/jquery-ui.css">
+    <link rel="stylesheet" href="http://foodmanagement.naxant.at/experimental/CSS/datatables.css">
+    <link rel="stylesheet" href="http://foodmanagement.naxant.at/experimental/CSS/materialize.css">
+    <link rel="stylesheet" href="http://foodmanagement.naxant.at/experimental/CSS/General.css">
 
     <link rel='stylesheet' href='//fonts.googleapis.com/css?family=font1|font2|etc' type='text/css'>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">

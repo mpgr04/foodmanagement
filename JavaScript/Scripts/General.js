@@ -25,6 +25,11 @@ $(document).ready(function () {
         "responsive": true,
         "paging": false
     });
+    $("#parentTable").DataTable({
+        "lengthChange": false,
+        "responsive": true,
+        "paging": false
+    })
     //#endregion
 
 });
