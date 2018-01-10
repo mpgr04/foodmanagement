@@ -79,6 +79,47 @@ $DatabaseHelper->Disconnect($connection);
         <a href="../Registration_Interface.php" class="btn-floating blue"><i class="material-icons">add</i></a>
         <a class="btn-floating "><i class="material-icons">exit_to_update</i></a>
       </ul>
+      <!--Dialogs START-->
+      <form id="dialog_AddChild" class="centerText centerHoriVerti" method="POST" action="http://foodmanagement.naxant.at/experimental/PHPScripts/AddChild.php">
+
+        <input type="text" name="textfield_childFirstname" />
+        <input type="text" name="textfield_childLastname" />
+        <select name="parentSelect">
+          <?php
+
+$connection=$DatabaseHelper->Connect("localhost","root","poelzlpichler_gr04!");
+$getParentsQuery="SELECT username FROM tb_users WHERE isParent = 1";
+$resullt=$DatabaseHelper->Query($connection,$getParentsQuery);
+
+if($DatabaseHelper->GetRowNr($resullt)>0){
+    
+    while($row=mysqli_fetch_assoc($result)){
+        
+        echo "<option>".$row["username"]."</option>";
+        
+    }
+    
+    
+}
+else{
+    echo "<option disabled>No Data available</option>";
+}
+
+$DatabaseHelper->Disconnect($connection);
+?>
+
+        </select>
+        <input type="submit" class="btn green" value="Create" />
+      </form>
+      <!--Dialogs END -->
+    </div>
+    <div class="fixed-action-btn horizontal">
+      <a class="btn-floating btn-large red">
+        <i class="large material-icons">mode_edit</i>
+      </a>
+      <ul>
+        <li><a class="btn-floating red" href="javascript:ShowAddChildDialog();"><i class="material-icons">add</i></a></li>
+      </ul>
     </div>
   </body>
 

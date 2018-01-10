@@ -25,7 +25,6 @@ else{
     <title>title</title>
     <!-- Libraries -->
     <script src="http://foodmanagement.naxant.at/experimental/Libraries/jQuery/jQuery.js"></script>
-    <!-- Not sure of below script type is needed -->
     <script src="http://foodmanagement.naxant.at/experimental/Libraries/jQueryDataTables/datatables.js" type="text/javascript"></script>
     <script src="http://foodmanagement.naxant.at/experimental/Libraries/jQueryUI/jquery-ui.js"></script>
     <script src="http://foodmanagement.naxant.at/experimental/Libraries/Materialize/materialize.js"></script>
@@ -55,7 +54,7 @@ else{
                 <option value="2">Option 2</option>
                 <option value="3">Option 3</option>
               </select>
-              <label>Materialize Multiple Select</label>
+              <label>Select</label>
             </div>
 
           </div>

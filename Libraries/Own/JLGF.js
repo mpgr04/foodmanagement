@@ -49,6 +49,11 @@
 
             return currentDateAndTime;
         };
+        JLGF.CSDialog(element) = function () {
+
+            $(element).dialog("open");
+
+        };
 
         return JLGF;
     }

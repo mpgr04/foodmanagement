@@ -6,6 +6,11 @@
 
 //#region Functions
 
+function ShowAddChildDialog() {
+
+    JLGF.CSDialog("#dialog_AddChild");
+
+}
 
 //#endregion
 
