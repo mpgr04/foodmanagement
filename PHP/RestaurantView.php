@@ -30,7 +30,6 @@ else{
     <title>Overview</title>
     <!-- Libraries -->
     <script src="http://foodmanagement.naxant.at/experimental/Libraries/jQuery/jQuery.js"></script>
-    <!-- Not sure of below script type is needed -->
     <script src="http://foodmanagement.naxant.at/experimental/Libraries/jQueryDataTables/datatables.js" type="text/javascript"></script>
     <script src="http://foodmanagement.naxant.at/experimental/Libraries/jQueryUI/jquery-ui.js"></script>
     <script src="http://foodmanagement.naxant.at/experimental/Libraries/Materialize/materialize.js"></script>
@@ -82,8 +81,8 @@ $DatabaseHelper->Disconnect($connection);
         <i class="large material-icons">mode_edit</i>
       </a>
       <ul>
-        <li><a href="http://foodmanagement.naxant.at/experimental/PHP/RestaurantView.php" class="btn-floating blue"><i class="material-icons">refresh</i></a></li>
-        <li><a href="../PHPScripts/Logout.php" class="btn-floating red" title="Logout"><i class="material-icons">exit_to_app</i></a></li>
+        <a href="http://foodmanagement.naxant.at/experimental/PHPScripts/Logout.php" class="btn-floating red"><i class="material-icons">exit_to_app</i></a>
+        <a class="btn-floating blue"><i class="material-icons">refresh</></a>
       </ul>
     </div>
   </body>
