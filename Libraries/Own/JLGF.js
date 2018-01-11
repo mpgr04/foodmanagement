@@ -58,8 +58,8 @@
         };
         JLGF.CreateMenu = function (element) {
 
-            /*Get object and retrieve needed data from its properties.
-              Parse them to an array and handle it to the object init method*/
+            $("#" + element).menu();
+
 
         };
         JLGF.DetectBrowser = function () {
