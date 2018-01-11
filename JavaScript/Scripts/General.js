@@ -11,7 +11,6 @@ function ShowAddChildDialog() {
     JLGF.CSDialog("#dialog_AddChild");
 
 }
-
 //#endregion
 
 
@@ -40,7 +39,13 @@ $(document).ready(function () {
     //#endregion
     //#endregion
 
-});
+    //#region Execute
+    $("#link_openUserActionsMenu").click(function () {
 
+        JLGF.CreateMenu("CreateMenu");
+    });
+    //#enderegion
+
+});
 //#endregion
 

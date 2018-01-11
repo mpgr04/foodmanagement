@@ -45,7 +45,7 @@ else{
       <div class="nav-wrapper">
         <a href="#" class="brand-logo">Logo</a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
-
+          <li><a id="link_openUserActionsMenu"><i class="material-icons">profile</i></a></li>
         </ul>
       </div>
     </nav>
@@ -80,7 +80,6 @@ else{
       </ul>
     </div>
     <!--Menues Start-->
-    <!--NEEDS TO BE TESTED-->
     <ul class="menu">
       <li class="ui-state-disabled">
         <div>Logout</div>

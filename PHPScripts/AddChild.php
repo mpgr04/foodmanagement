@@ -21,6 +21,4 @@ else{
     header("Location:http://foodmanagement.naxant.at/experimental/PHP/DayCareView.php");
     exit;
 }
-
-
 ?>

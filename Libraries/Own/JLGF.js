@@ -59,6 +59,7 @@
         JLGF.CreateMenu = function (element) {
 
             $("#" + element).menu();
+            JLGF.Show("#" + element);
 
 
         };
