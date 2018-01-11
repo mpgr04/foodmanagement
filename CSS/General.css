@@ -18,3 +18,9 @@
 .accentForecolor {
   color: #d32f2f !important;
 }
+
+.menu {
+  position: absolute;
+  display: none;
+  z-index: 1;
+}
