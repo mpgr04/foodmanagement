@@ -41,6 +41,14 @@ else{
   </head>
 
   <body>
+    <nav>
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo">Logo</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+
+        </ul>
+      </div>
+    </nav>
     <div class="valign-wrapper">
       <div class="row-valign">
         <div class="col">
@@ -71,6 +79,14 @@ else{
         <a class="btn-floating "><i class="material-icons">exit_to_update</i></a>
       </ul>
     </div>
+    <!--Menues Start-->
+    <!--NEEDS TO BE TESTED-->
+    <ul class="menu">
+      <li class="ui-state-disabled">
+        <div>Logout</div>
+      </li>
+    </ul>
+    <!--Menues End-->
   </body>
 
   </html>
