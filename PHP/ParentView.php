@@ -49,24 +49,35 @@ else{
         </ul>
       </div>
     </nav>
+
     <div class="valign-wrapper">
       <div class="row-valign">
-        <div class="col">
-          <div class="card hoverable" style="width:150px;height:150px;">
-            <h2>[PLACEHOLDER]</h2>
+        <?php
+require_once("http://foodmanagement.naxant.at/experimental/PHPClasses/Helper.php");
+$DatabaseHelper = new DatabaseHelper();
+$connection=$DatabaseHelper->Connect("root","poelzlpichler_gr04!","meal_management");
 
-            <div class="input-field col s12">
-              <select>
-                <option value="" disabled selected>Choose your option</option>
-                <option value="1">Option 1</option>
-                <option value="2">Option 2</option>
-                <option value="3">Option 3</option>
-              </select>
-              <label>Select</label>
-            </div>
+$getallChildrenQuery="SELECT firstname,lastname FROM tb_childs WHERE parent='.$_SESSION['username'].'";
+$result=$DatabaseHelper->Query($connection,$getallChildrenQuery);
 
-          </div>
+if($DatabaseHelper->GetRowNr($result)>0){
+    
+    while($row=mysqli_fetch_assoc($result)){
+        
+        echo "
+        <div class='card hoverable z-depth-1' style='width:150px;height:150px;'>
+        <h5>".$row['firstname']." ".$_SESSION['lastname']."</h5>
+        <div class='divider'></div>
+        <br>
+        <input type='checkbox' class='filled-in' id='cb_Attends'/>
+        <br>
+        <label for='cb_Attends'>Attends</label>
         </div>
+        ";
+    }
+}
+$DatabaseHelper->Disconnect($connection);
+?>
       </div>
     </div>
 
@@ -75,8 +86,8 @@ else{
         <i class="large material-icons">mode_edit</i>
       </a>
       <ul>
-        <a href="#" class="btn-floating blue"><i class="material-icons">refresh</i></a>
-        <a class="btn-floating "><i class="material-icons">exit_to_update</i></a>
+        <a class="btn-floating blue"><i class="material-icons">refresh</i></a>
+        <a id="link_updateChildState" class="btn-floating green"><i class="material-icons">save</i></a>
       </ul>
     </div>
     <!--Menues Start-->
