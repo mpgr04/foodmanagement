@@ -24,14 +24,14 @@ if ($_SESSION) {
     <title>Login</title>
 
     <!-- Libraries -->
-    <script src="Libraries/jQuery/jQuery.js" type="text/javascript"></script>
-    <script src="Libraries/Materialize/materialize.js" type="text/javascript"></script>
+    <script src="http://foodmanagement.naxant.at/experimentalLibraries/jQuery/jQuery.js" type="text/javascript"></script>
+    <script src="http://foodmanagement.naxant.at/experimental/Libraries/Materialize/materialize.js" type="text/javascript"></script>
     <!-- Scripts -->
-    <script src="JavaScript/General.js"></script>
+    <script src="http://foodmanagement.naxant.at/experimental/JavaScript/General.js"></script>
     <!-- CSS -->
-    <link rel="stylesheet" href="CSS/materialize.css" type="text/css">
-    <linkr rel="stylesheet" href="CSS/materializeCustom.css" type="text/css">
-      <link rel="stylesheet" href="CSS/General.css" type="text/css">
+    <link rel="stylesheet" href="http://foodmanagement.naxant.at/experimentalCSS/materialize.css" type="text/css">
+    <linkr rel="stylesheet" href="http://foodmanagement.naxant.at/experimentalCSS/materializeCustom.css" type="text/css">
+      <link rel="stylesheet" href="http://foodmanagement.naxant.at/experimentalCSS/General.css" type="text/css">
       <link rel='stylesheet' href='//fonts.googleapis.com/css?family=font1|font2|etc' type='text/css'>
   </head>
 
