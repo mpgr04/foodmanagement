@@ -30,7 +30,7 @@ $(document).ready(function () {
         "lengthChange": false,
         "responsive": true,
         "paging": false
-    })
+    });
 
     //#endregion
     //#endregion
@@ -45,7 +45,7 @@ $(document).ready(function () {
     });
     $("#btn_AddChild").click(function () {
 
-        JLGF.CSDialog("#btn_AddChild", "Add Child");
+        JLGF.CSDialog("#dialog_AddChild", "Add Child");
     });
     //#enderegion
 
