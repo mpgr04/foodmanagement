@@ -44,7 +44,7 @@ else{
     $resultObject=mysqli_fetch_object($IDQueryResult);
     $resultObject=get_object_vars($resultObject);
     $resultObject=array_values($resultObject)[0];
-    $nextID=$resultObject;
+    $nextID=$resultObject + 1;
     $hashed=trim($hashed);
     $createUserDataQuery="INSERT INTO tb_users (id, firstname, lastname, username, password, isRestaurant, isDayCare, isParent) VALUES ('$nextID', '$firstname', '$lastname', '$username', '$hashed', '$isRestaurant', '$isDayCare', '$isParent')";
     // ALTERNATIVE QUERY $createUserDataQuery="INSERT INTO tb_users VALUES ('$id', '$firstname', '$lastname', '$username', '$hashed', '$isRestaurant', '$isDayCare', '$isParent')";
