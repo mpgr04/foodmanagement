@@ -24,8 +24,7 @@ else{
     <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon">
     <title>title</title>
     <!-- Libraries -->
-    <script src="../Libraries/jQuery/jQuery.js"></script>
-    <!-- Not sure of below script type is needed -->
+    <script src="http://foodmanagement.naxant.at/experimental/Libraries/jQuery/jQuery.js"></script>
     <script src="http://foodmanagement.naxant.at/experimental/Libraries/jQueryDataTables/datatables.js" type="text/javascript"></script>
     <script src="http://foodmanagement.naxant.at/experimental/Libraries/jQueryUI/jquery-ui.js"></script>
     <script src="http://foodmanagement.naxant.at/experimental/Libraries/Materialize/materialize.js"></script>
