@@ -36,7 +36,7 @@ if ($_SESSION) {
     <link rel='stylesheet' href='//fonts.googleapis.com/css?family=font1|font2|etc' type='text/css'>
   </head>
 
-  <body style="background-image:url('http://foodmanagement.naxant.at/experimental/Resources/bg.png');" class=" fullscreenBackground ">
+  <bodystyle="background-image:url('http://foodmanagement.naxant.at/experimental/Resources/bg.png');" class=" fullscreenBackground ">
     <form method="POST " action="PHPScripts/Login_New.php " class=" centerHoriVerti z-depth-1 hoverable centerText " style="background-color:white;width:300px;height:250px; ">
       <h5 class="accentForecolor centerText ">Login</h5>
       <div class="divider "></div>
