@@ -35,16 +35,16 @@ if ($_SESSION) {
       <link rel='stylesheet' href='//fonts.googleapis.com/css?family=font1|font2|etc' type='text/css'>
   </head>
 
-  <body>
-    <form method="POST" action="PHPScripts/Login_New.php" class=" centerHoriVerti z-depth-1 hoverable centerText" style="background-color:white;width:300px;height:250px;">
-      <h5 class="accentForecolor centerText">Login</h5>
-      <div class="divider"></div>
+  <body style="background-image:url('http://foodmanagement.naxant.at/experimental/Resources/bg.png');" class=" fullscreenBackground ">
+    <form method="POST " action="PHPScripts/Login_New.php " class=" centerHoriVerti z-depth-1 hoverable centerText " style="background-color:white;width:300px;height:250px; ">
+      <h5 class="accentForecolor centerText ">Login</h5>
+      <div class="divider "></div>
       <br />
-      <input class="centerText" name="textfield_username" type="text" style="width:230px;" placeholder="Username..." />
+      <input class="centerText " name="textfield_username " type="text " style="width:230px; " placeholder="Username... " autofocus />
       <br />
-      <input class="centerText" name="textfield_password" type="password" style="width:230px;" placeholder="Passwort..." />
+      <input class="centerText " name="textfield_password " type="password " style="width:230px; " placeholder="Passwort... " />
       <br />
-      <input type="submit" class="btn-flat waves-effect accentForecolor" value="Login" />
+      <input type="submit " class="btn-flat waves-effect accentForecolor " value="Login " />
     </form>
   </body>
 

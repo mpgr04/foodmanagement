@@ -46,7 +46,7 @@ $(document).ready(function () {
     });
     $("#link_updateChildState").click(function () {
         //data object, url, isasync
-        JLGF.Ajax
+
         // Needs parenting
     });
     //#enderegion
