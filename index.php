@@ -26,13 +26,14 @@ if ($_SESSION) {
     <!-- Libraries -->
     <script src="http://foodmanagement.naxant.at/experimental/Libraries/jQuery/jQuery.js" type="text/javascript"></script>
     <script src="http://foodmanagement.naxant.at/experimental/Libraries/Materialize/materialize.js" type="text/javascript"></script>
+
     <!-- Scripts -->
     <script src="http://foodmanagement.naxant.at/experimental/JavaScript/Scripts/General.js"></script>
     <!-- CSS -->
     <link rel="stylesheet" href="http://foodmanagement.naxant.at/experimental/CSS/materialize.css" type="text/css">
-    <linkr rel="stylesheet" href="http://foodmanagement.naxant.at/experimental/CSS/materializeCustom.css" type="text/css">
-      <link rel="stylesheet" href="http://foodmanagement.naxant.at/experimental/CSS/General.css" type="text/css">
-      <link rel='stylesheet' href='//fonts.googleapis.com/css?family=font1|font2|etc' type='text/css'>
+    <link rel="stylesheet" href="http://foodmanagement.naxant.at/experimental/CSS/materializeCustom.css" type="text/css">
+    <link rel="stylesheet" href="http://foodmanagement.naxant.at/experimental/CSS/General.css" type="text/css">
+    <link rel='stylesheet' href='//fonts.googleapis.com/css?family=font1|font2|etc' type='text/css'>
   </head>
 
   <body style="background-image:url('http://foodmanagement.naxant.at/experimental/Resources/bg.png');" class=" fullscreenBackground ">
