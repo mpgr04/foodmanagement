@@ -27,7 +27,7 @@ if ($_SESSION) {
     <script src="http://foodmanagement.naxant.at/experimental/Libraries/jQuery/jQuery.js" type="text/javascript"></script>
     <script src="http://foodmanagement.naxant.at/experimental/Libraries/Materialize/materialize.js" type="text/javascript"></script>
     <!-- Scripts -->
-    <script src="http://foodmanagement.naxant.at/experimental/JavaScript/General.js"></script>
+    <script src="http://foodmanagement.naxant.at/experimental/JavaScript/Scripts/General.js"></script>
     <!-- CSS -->
     <link rel="stylesheet" href="http://foodmanagement.naxant.at/experimental/CSS/materialize.css" type="text/css">
     <linkr rel="stylesheet" href="http://foodmanagement.naxant.at/experimental/CSS/materializeCustom.css" type="text/css">
