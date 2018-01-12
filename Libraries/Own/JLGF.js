@@ -51,8 +51,14 @@
 
             return currentDateAndTime;
         };
-        JLGF.CSDialog(element) = function () {
+        JLGF.CSDialog(element, headline) = function () {
 
+            $(element).dialog({
+                modal: true,
+                resizable: false,
+                title: headline
+
+            });
             $(element).dialog("open");
 
         };

@@ -6,11 +6,7 @@
 
 //#region Functions
 
-function ShowAddChildDialog() {
 
-    JLGF.CSDialog("#dialog_AddChild");
-
-}
 //#endregion
 
 
@@ -42,12 +38,14 @@ $(document).ready(function () {
     //#region Execute
     $("#link_openUserActionsMenu").click(function () {
 
-        JLGF.CreateMenu("CreateMenu");
+        JLGF.CreateMenu("menu_userActionss");
     });
     $("#link_updateChildState").click(function () {
-        //data object, url, isasync
 
-        // Needs parenting
+    });
+    $("#btn_AddChild").click(function () {
+
+        JLGF.CSDialog("#btn_AddChild", "Add Child");
     });
     //#enderegion
 

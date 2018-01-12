@@ -91,7 +91,7 @@ $DatabaseHelper->Disconnect($connection);
       </ul>
     </div>
     <!--Menues Start-->
-    <ul class="menu">
+    <ul class="menu" id="menu_userActions">
       <li class="ui-state-disabled">
         <div>Logout</div>
       </li>
