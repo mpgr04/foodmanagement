@@ -10,8 +10,11 @@ class DatabaseHelper
             $connection=mysqli_connect($server, $user, $password, $db);
         }
         
-        if($connection){
-            return $connection;
+        if($connection!=""){
+            
+            if($connection!=false){
+                return $connection;
+            }
         }
     }
     public function Disconnect($dbc){
@@ -38,13 +41,8 @@ class DatabaseHelper
     }
     public function Query($connection,$query){
         $result=mysqli_query($connection,$query);
-        if($result===TRUE){
-            
-            return $result;
-        }
-        else{
-            echo "Your Query is not working as expected!";
-        }
+        
+        return $result;
     }
 }
 ?>

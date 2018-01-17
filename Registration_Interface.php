@@ -4,8 +4,9 @@
 session_start();
 
 if ($_SESSION) {
-    if ($_SESSION["loggedin"]==1) {
-        header("Location:PHP/RestaurantView.php");
+    if ($_SESSION["loggedin"]==0&&$_SESSION["isDayCare"]!=1) {
+        // header("Location:http://foodmanagement.naxant.at/experimental/index.php");
+        header("Location:http://foodmanagement.naxant.at/experimental/index.php");
         exit;
     }
 } else {
@@ -24,18 +25,19 @@ if ($_SESSION) {
     <title>Login</title>
 
     <!-- Libraries -->
-    <script src="Libraries/jQuery/jQuery.js" type="text/javascript"></script>
-    <script src="Libraries/Materialize/materialize.js" type="text/javascript"></script>
+    <script src="http://foodmanagement.naxant.at/experimental/Libraries/jQuery/jQuery.js" type="text/javascript"></script>
+    <script src="http://foodmanagement.naxant.at/experimental/Libraries/Materialize/materialize.js" type="text/javascript"></script>
     <!-- Scripts -->
-    <script src="JavaScript/General.js"></script>
+    <script src="http://foodmanagement.naxant.at/experimental/JavaScript/General.js"></script>
     <!-- CSS -->
-    <link rel="stylesheet" href="CSS/materialize.css" type="text/css" />
-    <link rel="stylesheet" href="CSS/General.css" type="text/css" />
+    <link rel="stylesheet" href="http://foodmanagement.naxant.at/experimental/CSS/materialize.css" type="text/css" />
+    <link rel="stylesheet" href="http://foodmanagement.naxant.at/experimental/CSS/materializeCustom.css" type="text/css">
+    <link rel="stylesheet" href="http://foodmanagement.naxant.at/experimental/CSS/General.css" type="text/css" />
     <link rel='stylesheet' href='//fonts.googleapis.com/css?family=font1|font2|etc' type='text/css'>
   </head>
 
-  <body>
-    <form method="POST" action="PHPScripts/Register.php"  class=" centerHoriVerti z-depth-1 hoverable centerText" style="background-color:white;width:400px;height:400px;">
+  <body style="background-image:url('http://foodmanagement.naxant.at/experimental/Resources/bg.png');">
+    <form method="POST" action="http://foodmanagement.naxant.at/experimental/PHPScripts/Register.php" class=" centerHoriVerti z-depth-1 hoverable centerText" style="background-color:white;width:400px;height:400px;">
       <h5 class="accentForecolor centerText">Useranlage</h5>
       <div class="divider"></div>
       <br />
@@ -45,17 +47,17 @@ if ($_SESSION) {
       <br />
       <input class="centerText" name="textfield_username" type="text" style="width:230px;" placeholder="Username..." />
       <br />
-      <input class="centerText" name="textfield_password" type="password" style="width:230px;" placeholder="Passwort..."/>
+      <input class="centerText" name="textfield_password" type="password" style="width:230px;" placeholder="Passwort..." />
       <br />
-      <input class="with-gap" name="isX" type="radio" id="isRestaurant" value="isRestaurant"/>
+      <input class="with-gap" name="isX" type="radio" id="isRestaurant" value="isRestaurant" />
       <label for="isRestaurant">Restaurant</label>
-      <input class="with-gap" name="isX" type="radio" id="isDayCare" value="isDayCare"/>
+      <input class="with-gap" name="isX" type="radio" id="isDayCare" value="isDayCare" />
       <label for="isDayCare">Nachmittagsbetreuung</label>
-      <input class="with-gap" name="isX" type="radio" id="isParent" value="isParent"/>
+      <input class="with-gap" name="isX" type="radio" id="isParent" value="isParent" />
       <label for="isParent">Eltern</label>
       <input type="submit" class="btn-flat waves-effect accentForecolor" value="User anlegen" />
     </form>
 
   </body>
 
-  </html><?php
+  </html>

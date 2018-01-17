@@ -1,0 +1,9 @@
+.ui-dialog-titlebar {
+    background-color: white;
+    border: none;
+    text-align: center;
+}
+
+.ui-dialog-titlebar-close {
+    visibility: hidden;
+}

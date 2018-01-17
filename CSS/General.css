@@ -1,3 +1,10 @@
+:root {
+  --accentBackColor: #d32f2f !important;
+  --accentForeColor: #d32f2f !important;
+}
+
+/*#region Positioning*/
+
 .centerHoriVerti {
   position: absolute;
   margin: auto;
@@ -11,10 +18,38 @@
   text-align: center !important;
 }
 
+/*#endregion*/
+
+/*#region Coloring*/
+
 .accentBackcolor {
-  background-color: #d32f2f !important;
+  background-color: var(--accentBackColor);
 }
 
 .accentForecolor {
-  color: #d32f2f !important;
+  color: var(--accentForeColor);
 }
+
+/*#endregion*/
+
+/*#region Menues*/
+
+.menu {
+  position: absolute;
+  display: none;
+  z-index: 1;
+}
+
+/*#endregion*/
+
+/*#region Backgrounds*/
+
+.fullscreenBackground {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  /* background-color: #464646; */
+}
+
+/*#endregion*/

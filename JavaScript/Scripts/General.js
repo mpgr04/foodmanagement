@@ -14,22 +14,32 @@
 
 $(document).ready(function () {
 
-    //#region Init
-    $("#ResView_OberviewTable").DataTable({
-        responsive: true
+    //#region Execute
+    $("#link_openUserActionsMenu").click(function () {
+
+        JLGF.CreateMenu("menu_userActionss");
+    });
+    $("#link_updateChildState").click(function () {
 
     });
-    //#endregion
+    $("#btn_AddChild").click(function () {
 
-    $("#ResView_Body").on("mousemove", function (event) {
-        if (event.pageX < 50) {
-            $("#ResView_SideNavActivator").sideNav("show");
-        }
-        else {
-            $("#ResView_SideNavActivator").sideNav("hide");
-        }
+        JLGF.CSDialog("#dialog_AddChild", "Add Child", false);
     });
+    $("#link_refreshPage").click(function () {
+
+        window.location.reload();
+
+    });
+    $("#link_updateChildState").click(function () {
+
+        $("input:checkbox[name=type]:checked").each(function () {
+            //Push push
+        });
+
+    });
+    //#enderegion
+
 });
-
 //#endregion
 

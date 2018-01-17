@@ -10,29 +10,46 @@ $isParent = 0;
 $isDayCare = 0;
 
 //Prüft welcher der Radiobuttons ausgewählt wurde
-if ($isX == 'isRestaurant') {
-    $isRestaurant == 1;
-}
-if ($isX == 'isDayCare') {
-    $isDayCare = 1;
-}
-if ($isX == 'isParent') {
-    $isParent == 1;
+
+switch($isX){
+    case "isRestaurant":
+        $isRestaurant=1;
+        break;
+    case "isDayCare":
+        $isDayCare=1;
+        break;
+    
+    case "isParent":
+        $isParent=1;
+        break;
+    
+    default:
+        break;
 }
 
+if($username==""&&$password==""&&$firstname==""&&$lastname==""&&$isX==""){
+    
+    // header("Location:http://foodmanagement.naxant.at/experimental/index.php");
+    header("Location:http://foodmanagement.naxant.at/experimental/index.php");
+    exit;
+}
 else{
+    
     require_once("../PHPClasses/Helper.php");
     $DatabaseHelper=new DatabaseHelper();
     
     $connection=$DatabaseHelper->Connect("localhost","root","poelzlpichler_gr04!","meal_management");
     $getLatesIDDataQuery="SELECT max(id) FROM tb_users";
-    $IDQueryResult=$DatabaseHelper->Query($connection,$getLatestIDDataQuery);
+    $IDQueryResult=$DatabaseHelper->Query($connection,$getLatesIDDataQuery);
     $resultObject=mysqli_fetch_object($IDQueryResult);
     $resultObject=get_object_vars($resultObject);
     $resultObject=array_values($resultObject)[0];
-    $nextID=$resultObject;
-    
+    $nextID=$resultObject + 1;
+    $hashed=trim($hashed);
     $createUserDataQuery="INSERT INTO tb_users (id, firstname, lastname, username, password, isRestaurant, isDayCare, isParent) VALUES ('$nextID', '$firstname', '$lastname', '$username', '$hashed', '$isRestaurant', '$isDayCare', '$isParent')";
-    // $createUserDataQuery="INSERT INTO tb_users VALUES ('$id', '$firstname', '$lastname', '$username', '$hashed', '$isRestaurant', '$isDayCare', '$isParent')"; ALTERNATIVE QUERY
-    $createUser=$DatabaseHelper->Query($connection,$createUserDataQuery);
+    // ALTERNATIVE QUERY $createUserDataQuery="INSERT INTO tb_users VALUES ('$id', '$firstname', '$lastname', '$username', '$hashed', '$isRestaurant', '$isDayCare', '$isParent')";
+    $DatabaseHelper->Query($connection,$createUserDataQuery);
+    
+    header("Location:http://foodmanagement.naxant.at/experimental/index.php");
+    exit;
 }

@@ -5,7 +5,7 @@ session_start();
 
 if ($_SESSION) {
     if ($_SESSION["loggedin"]==1) {
-        header("Location:PHP/RestaurantView.php");
+        header("Location:http://foodmanagement.naxant.at/experimental/PHP/RestaurantView.php");
         exit;
     }
 } else {
@@ -24,26 +24,29 @@ if ($_SESSION) {
     <title>Login</title>
 
     <!-- Libraries -->
-    <script src="Libraries/jQuery/jQuery.js" type="text/javascript"></script>
-    <script src="Libraries/Materialize/materialize.js" type="text/javascript"></script>
+    <script src="http://foodmanagement.naxant.at/experimental/Libraries/jQuery/jQuery.js"></script>
+    <script src="http://foodmanagement.naxant.at/experimental/Libraries/Materialize/materialize.js"></script>
     <!-- Scripts -->
-    <script src="JavaScript/General.js"></script>
+
     <!-- CSS -->
-    <link rel="stylesheet" href="CSS/materialize.css" type="text/css" />
-    <link rel="stylesheet" href="CSS/General.css" type="text/css" />
+    <link rel="stylesheet" href="http://foodmanagement.naxant.at/experimental/CSS/materialize.css">
+    <link rel="stylesheet" href="http://foodmanagement.naxant.at/experimental/CSS/materializeCustom.css">
+    <link rel="stylesheet" href="http://foodmanagement.naxant.at/experimental/CSS/General.css">
     <link rel='stylesheet' href='//fonts.googleapis.com/css?family=font1|font2|etc' type='text/css'>
   </head>
 
-  <body>
-    <form method="POST" action="PHPScripts/Login_New.php" class=" centerHoriVerti z-depth-1 hoverable centerText" style="background-color:white;width:300px;height:250px;">
+  <body style="background-image:url('http://foodmanagement.naxant.at/experimental/Resources/bg.png');" class="fullscreenBackground ">
+
+    <form method="POST" action="http://foodmanagement.naxant.at/experimental/PHPScripts/Login_New.php" class="centerHoriVerti z-depth-1 hoverable centerText " style="background-color:white;width:300px;height:250px; ">
       <h5 class="accentForecolor centerText">Login</h5>
       <div class="divider"></div>
       <br />
-      <input class="centerText" name="textfield_username" type="text" style="width:230px;" placeholder="Username..." />
+      <input class="centerText" name="textfield_usernameLogin" type="text" style="width:230px; " placeholder="Username..." autofocus />
       <br />
-      <input class="centerText" name="textfield_password" type="password" style="width:230px;" placeholder="Passwort..." />
+      <input class="centerText" name="textfield_passwordLogin" type="password" style="width:230px; " placeholder="Passwort..." />
       <br />
       <input type="submit" class="btn-flat waves-effect accentForecolor" value="Login" />
+      <a class="btn-flat accentForecolor" href="http://foodmanagement.naxant.at/experimental/Registration_Interface.php">Register</a>
     </form>
   </body>
 
