@@ -7,7 +7,8 @@ $(document).ready(function () {
         "lengthChange": false,
         "responsive": true,
         "paging": false,
-        "bInfo": false
+        "bInfo": false,
+        "select": true
     });
     $("#table_DCH").DataTable({
         "lengthChange": false,

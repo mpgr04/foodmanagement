@@ -33,9 +33,43 @@ $(document).ready(function () {
     });
     $("#link_updateChildState").click(function () {
 
-        $("input:checkbox[name=type]:checked").each(function () {
-            //Push push
-        });
+        debugger;
+
+
+        var submitObject = Object
+        var checkedElements = [];
+        var uncheckedElements = [];
+
+        for (let i = 0; i < document.getElementsByClassName("switch").length; i++) {
+
+            let currentSwitch = document.getElementsByClassName("switch")[i].children[0].children[0]
+
+
+            if ($(currentSwitch).is(":checked")) {
+
+                let childname = document.getElementsByClassName("switch")[i].parentElement.children[0].innerHTML;
+                let childNameSeperated = childname.split(" ");
+                let firstname = childNameSeperated[0];
+                let lastname = childNameSeperated[1];
+                let loopCounter = i.toString();
+                var checkedChild = { firstname: firstname, lastname: lastname };
+                checkedElements.push(checkedChild);
+            }
+            else {
+                let childname = document.getElementsByClassName("switch")[i].parentElement.children[0].innerHTML;
+                let childNameSeperated = childname.split(" ");
+                let firstname = childNameSeperated[0];
+                let lastname = childNameSeperated[1];
+                var uncheckedChild = { firstname: firstname, lastname: lastname };
+                uncheckedElements.push(uncheckedChild);
+            }
+
+
+        }
+        submitObject.CheckedChilds = checkedElements;
+        submitObject.UncheckedChilds = UncheckedChilds;
+
+        JLGF.Ajax(submitObject, "http://foodmanagement.naxant.at/experimental/PHPScripts/updateparentview.php", true);
 
     });
     //#enderegion

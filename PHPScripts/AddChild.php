@@ -13,7 +13,7 @@ if($firstname==""||$lastname==""||$selectedParent==""){
 else{
     require_once("../PHPClasses/Helper.php");
     $DatabaseHelper=new DatabaseHelper();
-    $connection=$DatabaseHelper->Connect("localhost","root","poelzlpichler_gr04!","meal_management");
+    $connection=$DatabaseHelper->Connect("localhost","""","meal_management");
     $addChildQuery="INSERT INTO tb_childs('placeholder','.$firstname.','.$lastname.','.$selectedParent.',0)";
     $result=$DatabaseHelper->Query($connection,$addChildQuery);
     

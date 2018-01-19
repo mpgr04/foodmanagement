@@ -88,7 +88,7 @@ $DatabaseHelper->Disconnect($connection);
       <ul>
         <li><a id="link_refreshPage" class="btn-floating blue"><i class="material-icons">refresh</i></a></li>
         <li><a id="link_updateChildState" class="btn-floating green"><i class="material-icons">save</i></a></li>
-        <li><a href="http://foodmanagement.naxant.at/experimental/PHPScripts/Logout.php" class="btn-floating red"><i class="material-icons">exit_to_update</i></a></li>
+        <li><a href="http://foodmanagement.naxant.at/experimental/PHPScripts/Logout.php" class="btn-floating red"><i class="material-icons">exit_to_app</i></a></li>
       </ul>
     </div>
   </body>
