@@ -67,7 +67,7 @@ $(document).ready(function () {
 
         }
         submitObject.CheckedChilds = checkedElements;
-        submitObject.UncheckedChilds = UncheckedChilds;
+        submitObject.UncheckedChilds = uncheckedElements;
 
         JLGF.Ajax(submitObject, "http://foodmanagement.naxant.at/experimental/PHPScripts/updateparentview.php", true);
 
