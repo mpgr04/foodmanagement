@@ -46,7 +46,6 @@
             let day = date.getDay();
             let month = date.getMonth() + 1;
             let year = date.getUTCFullYear();
-
             let currentDateAndTime = { Day: day, Month: month, Year: year };
 
             return currentDateAndTime;
@@ -83,12 +82,9 @@
             let values = [isOpera, isFirefox, isSafari, isIE, isEdge, isChrome];
 
             for (let i = 0; i < values.length; i++) {
-
                 if (values[i] === true) {
-
                     return values[i];
                 }
-
             }
         };
         return JLGF;
