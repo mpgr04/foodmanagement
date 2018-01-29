@@ -44,5 +44,11 @@ class DatabaseHelper
         
         return $result;
     }
+    public function RESCStr($connection,$string){
+        
+        $str=mysqli_real_escape_string($connection,$string);
+        return $str;
+        
+    }
 }
 ?>
