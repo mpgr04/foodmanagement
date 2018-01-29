@@ -58,45 +58,22 @@ if($DatabaseHelper->GetRowNr($result)>0){
     
     while($row=mysqli_fetch_assoc($result)){
         
-        if($row["attending"]==1){
-            
-            echo "
-            <div class='col' style='padding-top:40px;padding-left:40px;'>
-            <div class='card hoverable z-depth-1 centerText' style='width:200px;height:87px;'>
-            <h5 class='centerText'style='color:#d32f2f;'>".$row['firstname']." ".$row['lastname']."</h5>
-            <div class='divider'></div>
-            <label>Attending</label>
-            <div class='switch'>
-            <label>
-            <input type='checkbox' checked/>
-            <span class='lever'></span>
-            </label>
-            </div>
-            
-            </div>
-            </div>
-            ";
-            
-        }
-        else{
-            echo "
-            <div class='col' style='padding-top:40px;padding-left:40px;'>
-            <div class='card hoverable z-depth-1 centerText' style='width:200px;height:87px;'>
-            <h5 class='centerText'style='color:#d32f2f;'>".$row['firstname']." ".$row['lastname']."</h5>
-            <div class='divider'></div>
-            <label>Attending</label>
-            <div class='switch'>
-            <label>
-            <input type='checkbox'/>
-            <span class='lever'></span>
-            </label>
-            </div>
-            
-            </div>
-            </div>
-            ";
-        }
+        echo "
+        <div class='col' style='padding-top:40px;padding-left:40px;'>
+        <div class='card hoverable z-depth-1 centerText' style='width:200px;height:87px;'>
+        <h5 class='centerText'style='color:#d32f2f;'>".$row['firstname']." ".$row['lastname']."</h5>
+        <div class='divider'></div>
+        <label>Attending</label>
+        <div class='switch'>
+        <label>
+        <input type='checkbox'/>
+        <span class='lever'></span>
+        </label>
+        </div>
         
+        </div>
+        </div>
+        ";
     }
 }
 $DatabaseHelper->Disconnect($connection);

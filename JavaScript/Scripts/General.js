@@ -14,11 +14,13 @@
 
 $(document).ready(function () {
 
-
     //#region Execute
     $("#link_openUserActionsMenu").click(function () {
 
         JLGF.CreateMenu("menu_userActionss");
+    });
+    $("#link_updateChildState").click(function () {
+
     });
     $("#btn_AddChild").click(function () {
 
@@ -65,13 +67,9 @@ $(document).ready(function () {
 
         }
         submitObject.CheckedChilds = checkedElements;
-        submitObject.UncheckedChilds = uncheckedElements;
+        submitObject.UncheckedChilds = UncheckedChilds;
 
-        let rf = function () {
-            window.location.reload();
-        };
-
-        JLGF.Ajax(submitObject, "http://foodmanagement.naxant.at/experimental/PHPScripts/UpdateChildState.php", true, rf);
+        JLGF.Ajax(submitObject, "http://foodmanagement.naxant.at/experimental/PHPScripts/updateparentview.php", true);
 
     });
     //#enderegion

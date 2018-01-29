@@ -34,10 +34,11 @@ else{
     <script src="http://foodmanagement.naxant.at/experimental/JavaScript/Scripts/General.js"></script>
     <!-- CSS -->
     <link rel="stylesheet" href="http://foodmanagement.naxant.at/experimental/CSS/jquery-ui.css">
-    <link rel="stylesheet" href="http://foodmanagement.naxant.at/experimental/CSS/datatables.css">
     <link rel="stylesheet" href="http://foodmanagement.naxant.at/experimental/CSS/jQueryUICustom.css">
+    <link rel="stylesheet" href="http://foodmanagement.naxant.at/experimental/CSS/datatables.css">
     <link rel="stylesheet" href="http://foodmanagement.naxant.at/experimental/CSS/materialize.css">
     <link rel="stylesheet" href="http://foodmanagement.naxant.at/experimental/CSS/General.css">
+
     <link rel='stylesheet' href='//fonts.googleapis.com/css?family=font1|font2|etc' type='text/css'>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
@@ -45,9 +46,8 @@ else{
   <body>
     <table id="table_DCH">
       <thead>
-        <th>Firstname</th>
-        <th>Lastname</th>
-        <th>Parent</th>
+        <th>Name</th>
+        <th>Date</th>
         <th>Attended</th>
       </thead>
       <tbody>
@@ -56,18 +56,13 @@ else{
 require_once("../PHPClasses/Helper.php");
 $DatabaseHelper=new DatabaseHelper();
 $connection=$DatabaseHelper->Connect("localhost","root","poelzlpichler_gr04!","meal_management");
-$query_GetAllFromDCH="SELECT * FROM tb_childs";
+$query_GetAllFromDCH="SELECT * FROM tb_daycare_history";
 $queryResult=$DatabaseHelper->Query($connection,$query_GetAllFromDCH);
 if($DatabaseHelper->GetRowNr($queryResult)>0){
     
     while($row=mysqli_fetch_assoc($queryResult)){
         
-        if($row["attending"]=1){
-            echo "<tr><td>".$row["firstname"]."</td><td>".$row["lastname"]."</td><td>".$row["parent"]."</td><td>Yes</td></tr>";
-        }
-        else{
-            echo "<tr><td>".$row["firstname"]."</td><td>".$row["lastname"]."</td><td>".$row["parent"]."</td><td>No</td></tr>";
-        }
+        echo "<tr><td>".$row["name"]."</td><td>".$row["date"]."</td><td>".$row["amount"]."</td></tr>"; /*must be changed*/
     }
 }
 
