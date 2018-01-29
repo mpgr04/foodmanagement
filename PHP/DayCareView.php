@@ -83,7 +83,7 @@ $DatabaseHelper->Disconnect($connection);
       <select id="select_parents" style="display:block;" name="parentSelect" class="input-field col s12">
         <?php
 #region Get Parents
-$connection=$DatabaseHelper->Connect("localhost","root","poelzlpichle_gr04!","meal_management");
+$connection=$DatabaseHelper->Connect("localhost","root","poelzlpichler_gr04!","meal_management");
 $getParentsQuery="SELECT username FROM tb_users WHERE isParent = 1";
 $result=$DatabaseHelper->Query($connection,$getParentsQuery);
 
