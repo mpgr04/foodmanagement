@@ -59,7 +59,7 @@ else{
 #region Get Data from Database
 require_once("../PHPClasses/Helper.php");
 $DatabaseHelper=new DatabaseHelper();
-$qry_getDataForResOverview="SELECT * FROM tb_restaurant_history";
+$qry_getDataForResOverview= "SELECT * FROM tb_restaurant_history";
 $connection=$DatabaseHelper->Connect("localhost","root","poelzlpichler_gr04!","meal_management");
 $result=$DatabaseHelper->Query($connection,$qry_getDataForResOverview);
 
@@ -68,7 +68,7 @@ if($DatabaseHelper->GetRowNr($result)>0){
     
     while($row=mysqli_fetch_assoc($result)){
         
-        echo "<tr><td>".$row["date"]."</td><td>".$row["amount"]."</td><td>".$row["description"]."</td></tr>";
+        echo "<tr><td>".$row["date"]."</td><td>".$row["description"]."</td><td>".$row["amount"]."</td></tr>";
     }
     
 }

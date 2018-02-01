@@ -13,14 +13,17 @@ if($firstname==""||$lastname==""||$selectedParent==""){
 else{
     require_once("../PHPClasses/Helper.php");
     $DatabaseHelper=new DatabaseHelper();
-    $connection=$DatabaseHelper->Connect("localhost","poelzlpichler_gr04!","meal_management");
-    $getLatesIDDataQuery="SELECT max(id) FROM tb_users";
-    $IDQueryResult=$DatabaseHelper->Query($connection,$getLatesIDDataQuery);
-    $resultObject=mysqli_fetch_object($IDQueryResult);
-    $resultObject=get_object_vars($resultObject);
-    $resultObject=array_values($resultObject)[0];
-    $nextID=$resultObject + 1; 
-    $addChildQuery="INSERT INTO tb_childs($nextID,'.$firstname.','.$lastname.','.$selectedParent.',0)";
+    $connection=$DatabaseHelper->Connect("localhost","root","poelzlpichler_gr04!","meal_management");
+    $getLatestIDQuery="SELECT max(id) FROM tb_childs";
+    $latestIDRes=$DatabaseHelper->Query($connection,$getLatestIDQuery);
+    if($latestIDRes!=""){
+        $latestID=mysqli_fetch_object($latestIDRes);
+        $latestID=get_object_vars($latestID);
+        $latestID=array_values($latestID);
+        $latestID=$latestID[0];
+        $newid=$latestID+1;
+    }
+    $addChildQuery="INSERT INTO tb_childs VALUES('$newid','$firstname','$lastname','$selectedParent','0')";
     $result=$DatabaseHelper->Query($connection,$addChildQuery);
     
     $DatabaseHelper->Disconnect($connection);
